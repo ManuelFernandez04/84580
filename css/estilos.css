@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Custom Properties*/
+html {
+    /* Colores para el fondo */
+
+    --bg-color-200:hsl(214, 25%, 11%);
+    --bg-color-400:hsl(212, 19%, 16%);
+    --bg-color-400-75:hsl(212, 19%, 16%, 75%);
+    --bg-color-500:hsl(212, 19%, 25%);
+
+    /* Color del texto */
+
+    --text-color:hsl(215, 25%, 85%);
+
+    /* Colores de acento */
+
+    --accent-color-200:hsl(22, 44%, 12%);
+    --accent-color-400:hsl(22, 100%, 65%);
+    --accent-color-500:hsl(22, 100%, 85%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter", sans-serif; /* Familia Tipografica */
+    font-optical-sizing: auto; /* Ajuste Optico */
+}
+
+/*Estilos generales*/
+/* Selector de etiqueta */
+body {
+    background-color: var(--bg-color-200);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/*Estilos para las H*/
+h1{
+    font-family: "Inter", sans-serif; /* Familia Tipografica */
+    font-optical-sizing: auto; /* Ajuste Optico */
+    font-size: 32px; /* Cuerpo de la tipografia */
+    font-weight: 400; /* Grosor de linea */
+    /* font-style: italic; */ /* Inclinacion */
+    text-align: center; /* Alineacion de texto */
+    color: rgb(255, 255, 255);
+}
+
+/*Estilos para el header*/
+header{
+    background-color: var(--bg-color-400);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/*Estilos para las secciones*/
+section{
+    width: min(62 rem, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/*Seccion de bienvenida*/   
+#bienvenida {
+    min-height: 32rem;
+    background-image: url('../img/bienvenida.jpg');
+    background-size: cover;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#bienvenida h1 {
+    background-color: var(--bg-color-400-75);
+    padding: 1.5rem 1rem;
+}
+
+/*Estilos para el footer*/
+footer {
+    background-color: var(--bg-color-400);
+    padding: 2rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer img{
+    width: 3rem;
+}
+
+/* Clase 2, 3 Modelo de caja */
+/* Selector de clase */
+.modelo-de-caja{
+    background-color: var(--bg-color-500);/* Color de Fondo */
+    padding: 16px; /* Margen interno */
+    border: 2px solid var(--accent-color-400);/* Borde, Grosor Estilo Color */
+    margin: 1rem auto 2rem; /* Margen externo */
+
+    width: min(650px, 75%); /* Ancho */
+    min-height: 250px; /* Alto*/
+
+}
+
+.box-sizing-content {
+    box-sizing: content-box; 
+}
+
+.box-sizing-border {
+    box-sizing: border-box;
+}
+
+/* Clase 4: Imagenes */
+.img-item{
+    width: 12rem;
+    object-fit: cover;
+    aspect-ratio: 1/1; /*Aspecto*/
+    border-radius: 100%; /*Radio del borde*/
+    filter: grayscale(100%);
+}
+
+.img-item:hover {
+    filter: grayscale(0); /*Filtros*/
+    cursor: pointer; /*Modificar Cursor*/
+    border: 0.2rem solid var(--accent-color-400);
+}
+
+.img-responsive {
+    width: 100%;
+}
+/* Clase 4: Flexbox */
+.contenedor-flex-row {
+    display: flex;
+    flex-direction: row; /* Controla la direccion del eje pricipal */
+    gap: 0.5rem;
+    justify-content: center; /* Controla la alineacion de los elementos siguiendo el eje principal*/
+    align-items: center; /* Controla la alineacion de los elementos siguiendo el eje secundario */
+    background-color: var(--bg-color-500);
+    padding: 2rem;
+    min-height: 32rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-flex-column {
+    display: flex;
+    flex-direction: column; /* Controla la direccion del eje pricipal */
+    gap: 0.5rem;
+    justify-content: center; /* Controla la alineacion de los elementos siguiendo el eje principal*/
+    align-items: stretch; /* Controla la alineacion de los elementos siguiendo el eje secundario */
+    background-color: var(--bg-color-500);
+    padding: 2rem;
+    min-height: 32rem;
+    margin-bottom: 2rem;
+}
+
+.item {
+    padding: 2rem;
+    border: 0.2rem solid var(--accent-color-400);
+    text-align: center;
+
+    border-radius: 1rem;
+    background-color: var(--bg-color-200);
+}
+
+/* Clase 5: Links y ejercicio de novedades */
+/* Estilo para vinculos */
+a{
+    text-decoration: none;
+}
+
+/* Links para el header */
+a.link-h1:link,
+a.link-h1:visited{
+    color: var(--accent-color-400);
+}
+
+a.link-h1:hover,
+a.link-h1:active{
+    color: var(--accent-color-500);
+}
+
+a.link-nav:link,
+a.link-nav:visited{
+    color: var(--text-color);
+}
+
+a.link-nav:hover,
+a.link-nav:active{
+    color: var(--accent-color-400);
+}
+
+
+/* Links para el main */
+/* Reposo, :link */
+/* Reposo, :visited */
+main a:link,
+main a:visited{
+    color: var(--accent-color-400);
+}
+/* Hover, :hover */
+/* Hover, :active */
+main a:hover,
+main a:active{
+    color: var(--accent-color-500);
+}
+
+/* Clase 5, ejercicio Novedades resuelto */
+/* Resolución del ejercicio de Novedades */
+/* Quitamos el margin de todos los elementos que componen el contenedor-novedades */
+.contenedor-novedades {
+    margin: 0;
+}
+
+/* Crear el display flex para el catálogo */
+.contenedor-novedades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.contenedor-novedades article {
+    width: 12rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+/* Estilos para el título del libro */
+.contenedor-novedades article h2 {
+  font-size: 1rem;
+}
+
+/* Estilos para el autor del libro */
+.contenedor-novedades article h3 {
+  font-weight: 400;
+}
+
+/* Contenedor de los botones */
+.contenedor-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Links para los artículos */
+/* :link / :visited */
+a.btn-outline:link,
+a.btn-outline:visited {
+  border: 0.15rem solid var(--bg-color-500);
+  padding: 0.4rem 0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+a.btn-fill:link,
+a.btn-fill:visited {
+  border: 0.15rem solid var(--bg-color-500);
+  background-color: var(--bg-color-400);
+  padding: 0.4rem 0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* :hover / :active */
+a.btn-outline:hover,
+a.btn-outline:active {
+  border: 0.15rem solid var(--accent-color-400);
+  background-color: var(--bg-color-400);
+}
+
+a.btn-fill:hover,
+a.btn-fill:active {
+  border: 0.15rem solid var(--accent-color-400);
+  background-color: var(--accent-color-400);
+  color: var(--bg-color-200);
+}
