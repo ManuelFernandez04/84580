@@ -38,13 +38,16 @@ body {
 
 /*Estilos para las H*/
 h1{
-    font-family: "Inter", sans-serif; /* Familia Tipografica */
-    font-optical-sizing: auto; /* Ajuste Optico */
     font-size: 32px; /* Cuerpo de la tipografia */
-    font-weight: 400; /* Grosor de linea */
+    font-weight: 300; /* Grosor de linea */
     /* font-style: italic; */ /* Inclinacion */
     text-align: center; /* Alineacion de texto */
-    color: rgb(255, 255, 255);
+}
+
+/* Accesibilidad para links */
+a:focus-visible {
+  outline: 0.2rem solid var(--accent-color-400);
+  outline-offset: 0.5rem;
 }
 
 /*Estilos para el header*/
@@ -54,6 +57,15 @@ header{
     text-align: center;
 }
 
+header nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 header h1 {
     font-size: 2rem;
     font-weight: 800;
@@ -61,9 +73,11 @@ header h1 {
 
 /*Estilos para las secciones*/
 section{
-    width: min(62 rem, 100%);
+    width: min(62rem, 100%);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1.5rem;
 }
 
 /*Seccion de bienvenida*/   
@@ -97,7 +111,6 @@ footer {
 footer h1 {
     font-size: 1rem;
     font-weight: 600;
-    text-align: left;
 }
 
 footer ul {
@@ -127,11 +140,11 @@ footer img{
 }
 
 .box-sizing-content {
-    box-sizing: content-box; 
+    box-sizing: content-box; /* Suma el valor de su padding y borde al tamaño final del elemento */
 }
 
 .box-sizing-border {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Los elementos no modifican su tamaño siguiendo el padding y borde */
 }
 
 /* Clase 4: Imagenes */
@@ -244,6 +257,7 @@ main a:active{
     gap: 1rem;
 }
 
+/* Display flex para los elementos dentro de los artículos */
 .contenedor-novedades article {
     width: 12rem;
     text-align: center;
@@ -303,4 +317,148 @@ a.btn-fill:active {
   border: 0.15rem solid var(--accent-color-400);
   background-color: var(--accent-color-400);
   color: var(--bg-color-200);
+}
+
+/* Clase 7 */
+/* Formularios */
+form {
+    background-color: var(--bg-color-400);
+    padding: 2rem;
+    width: min(24rem, 100%);
+    margin: 0 auto;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--accent-color-400);
+}
+
+form input,
+form button,
+form select,
+form textarea {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--bg-color-400);
+}
+
+form textarea {
+    min-height: 12rem;
+}
+
+form button {
+    background-color: var(--accent-color-400);
+    font-weight: 600;
+}
+
+form button:focus {
+    background-color: var(--accent-color-500);
+}
+
+form span {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color-400);
+    text-align: right;
+}
+
+/* Clase 9 */
+
+/* Video */
+
+video{
+    width: 100%;
+}
+
+iframe{
+    border: none;
+}
+
+.video-yt{
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+/* Mapas */
+/* Vista Normal */
+
+.mapa-normal{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.mapa-stv{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+/* Contacto */
+#contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.contenedor-contacto{
+    display: flex;
+    gap: 1rem;
+}
+
+.contacto-izq{
+    width: 50%;
+}
+
+.contacto-der * {
+    text-align: left;
+}
+
+.contacto-der{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contenedor-mapa{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.mapa-izq{
+    width: 50%;
+}
+
+.mapa-der{
+    width: 50%;
+}
+
+/* Tablas */
+
+#tablas{
+    display: block;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background-color: var(--accent-color-400);
+    color: var(--bg-color-200);
+    padding: 0.5rem;
+}
+
+td{
+    background-color: var(--bg-color-400);
+    padding: 0.5rem;
+}
+
+
+td{
+    border: 0.1rem solid var(--accent-color-500);
 }
