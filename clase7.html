@@ -24,11 +24,46 @@
             <h1>Bienvenidos a la clase 7</h1>
         </section>
         <section>
+            <h1>Trabajo con Formularios</h1>
+            <form action="">
+                <h2>Registro</h2>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="¿Como te llamas?" required>
+                <span>Mensaje de estado</span>
 
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="¿Cual es tu Apellido?" required>
+                <span>Mensaje de estado</span>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="email@domain.com" required>
+                <span>Mensaje de estado</span>
+
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{10,}$" title="La contraseña debe tener al menos 10 caracteres, 1 mayúscula, 1 número y 1 símbolo (!@#$%^&*)" required>
+                <span>Mensaje de estado</span>
+
+                <button>Registrarme</button>
+            </form>
         </section>
     </main>
-    <footer>
-
+    <footer> 
+        <nav>
+            <ul>
+                <li><h1>Sobre Nuestro Curso:</h1></li>
+                <li><a class="link-h1" href="https://www.educacionit.com/curso-de-html" target="_blank" rel="noopener noreferrer" title="Podes ver el programa del curso en este link en el sitio de Educacion IT">Programa</a></li>
+                <li><a class="link-h1" href="https://alumni.education/" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+                
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://wa.me/5493416007136" target="_blank" rel="noopener noreferrer" title="Comunicate con nosotros a traves de whatsapp"><img src="img/whatsapp-brands-solid-full.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
